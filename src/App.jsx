@@ -13,7 +13,8 @@ import {
   GraduationCap,
   Code,
   Database,
-  Brain,
+  HardDrive,
+  BadgeDollarSign,
 } from "lucide-react";
 
 export default function Portfolio() {
@@ -116,90 +117,126 @@ export default function Portfolio() {
 
 
   const stats = [
-    {icon: <Target />, value: "93%", label: "Retrieval Accuracy Achieved"},
-    {icon: <Users />, value: "95%+", label: "Intruder Detection Accuracy"},
-    {icon: <Award />, value: "$2.1M", label: "Client Cost Savings"},
-    {icon: <Zap />, value: "140s → 20s", label: "Execution Time Reduction"}
-  ];
+  { icon: <Database />, value: "18M+", label: "Financial Records Processed" },
+  { icon: <HardDrive />, value: "200GB+", label: "Data Processed" },
+  { icon: <Zap />, value: "98%", label: "Query Time Reduction" },
+  { icon: <BadgeDollarSign />, value: "$2.0M+", label: "Client Cost Savings" }
+];
 
 
   const experience = [
     {
-      company: "Oracle",
-      role: "AI/ML Engineer Intern",
-      period: "Feb 2025 – Jul 2025",
-      location: "Bengaluru, India",
+      company: "Lighthouse Investment Partners",
+      role: "AI Engineer Intern",
+      period: "May 2026 – Aug 2026",
+      location: "Palm Beach Gardens, FL",
       achievements: [
-        "Automated extraction of key legal clauses from 100+ page documents using LLMSherpa, Word2Vec embeddings, and dense vector search across 8 US regions",
-        "Improved retrieval accuracy from 61% to 93% by designing an LLM-based taxonomy filtering layer (Cohere Command R+), eliminating irrelevant semantic matches at scale",
-        "Led a 5-member team in the design of an LLM-based taxonomy filtering layer, which played a key role in lowering annual client costs from $2.3M to $200K–$300K."
+        "Built an enterprise AI assistant using C#, .NET, React, TypeScript and SQL Server, reducing financial data retrieval time by 98% through natural language-to-SQL automation.",
+        "Architected secure LLM pipelines with SQL validation, conversation memory and guardrails to prevent unsafe model behavior while protecting confidential financial data.",
+        "Leveraged Azure AI Foundry to evaluate and deploy multiple frontier LLMs (GPT-5.4, Claude Opus 4.7) and speech-to-text services, enabling a flexible, voice-enabled enterprise AI assistant."
       ]
     },
     {
-      company: "Toyota Kirloskar Auto Parts",
-      role: "Data Analyst Intern",
-      period: "Jun 2024 – Sep 2024",
+      company: "University of Virginia - Darden School of Business",
+      role: "Research Assistant",
+      period: "Jan 2026 – Apr 2026",
+      location: "Charlottesville, VA",
+      achievements: [
+        "Designed and maintained scalable Python-based platforms and ETL pipelines, processing 18M+ financial records (200GB+), improving preprocessing reliability and throughput by 10×.",
+        "Applied basic machine learning and NLP concepts using transformer models, validating outputs and improving preprocessing efficiency to 90% (10× speedup) on Linux HPC systems.", 
+        "Used Git for version control and collaborated with 3 researchers, clearly communicating technical results and managing experiments independently."
+      ]
+    },
+    {
+      company: "Oracle",
+      role: "AI Engineer Intern",
+      period: "Feb 2025 – Jul 2025",
       location: "Bengaluru, India",
       achievements: [
-        "Automated Excel-based safety validations for large datasets (1000 rows × 700 columns) using Python and Pandas, replacing manual checks driven by frequently changing criteria sheets",
-        "Reduced execution time from 140s to 20s by eliminating Excel Macros and implementing an optimized Python pipeline",
-        "Built a Tkinter GUI for one-click execution, enabling fully automated validation for gears, axles and driveshafts with 100% accuracy and zero manual intervention"
+        "Automated extraction of key legal clauses from 100+ page documents using LLMSherpa, Word2Vec embeddings and dense vector search across 8 US regions.",
+        "Improved retrieval accuracy from 61% to 93% by designing an LLM-based taxonomy filtering layer (Cohere Command R+), eliminating irrelevant semantic matches at scale.",
+        "Led a 5-member team in the design of an LLM-based taxonomy filtering layer, which played a key role in lowering annual client costs from $2.3M to $200K."
       ]
     }
   ];
 
   const projects = [
+    {
+    title: "Cognitive Court: Multi-Agent LLM Evaluation Framework",
+    impact: "• 3 LLMs  • 5-Metric Evaluation",
+    stack: "• Python • OpenRouter • OpenAI • Streamlit",
+    desc: [
+      "Developed a multi-agent Python framework orchestrating 3 LLMs to generate, verify and evaluate scientific reasoning using automated judging and claim verification.",
+      "Engineered a modular evaluation pipeline with structured prompting, claim verification and a Streamlit interface for transparent LLM comparison."
+    ],
+    highlights: [
+      "3 LLM orchestration",
+      "Claim verification",
+      "5-metric reasoning evaluation"
+    ]
+  },
+    {
+    title: "Privacy Risks of RAG in Role-Based Healthcare Systems",
+    impact: "• 0% Leakage with Role-Filtered Retrieval",
+    stack: "• Python • LangChain • FAISS • OpenAI",
+    desc: [
+      "Built a role-based healthcare RAG pipeline with vector retrieval, document chunking, embeddings, and metadata-driven access control to evaluate privacy risks in LLM-powered assistants.",
+      "Evaluated direct extraction, transformation, and membership inference attacks, demonstrating that enforcing role-based retrieval reduced attack success from 88% to 0%."
+    ],
+    highlights: [
+      "Healthcare RAG",
+      "Role-based access control",
+      "Privacy attack evaluation"
+    ]
+  },
+  {
+    title: "UNet: Uniting NGOs, Empowering Networks and Amplifying Social Change",
+    impact: "• 500+ NGOs Integrated  • Secure Donations & Volunteering",
+    stack: "• Flutter • Django • PostgreSQL • Python",
+    desc: [
+      "Developed a full-stack NGO platform enabling registration, donations, volunteering and real-time engagement.",
+      "Integrated a content-based recommendation engine across 500+ NGOs and implemented secure Razorpay payments with end-to-end validation for authentication, onboarding and transaction workflows."
+    ],
+    highlights: ["Full-stack social platform", "Cross-Platform UI", "End-to-End Encryption"]
+  },
   {
     title: "Explainable Skin Lesion Classification with Attention-Enhanced CNNs",
-    impact: "87.4% Test Accuracy",
-    stack: "Python • PyTorch • EfficientNet-B0",
+    impact: "• 87.4% Test Accuracy",
+    stack: "• Python • PyTorch • EfficientNet-B0",
     desc: [
       "Extended EfficientNet-B0 with a trainable, metadata-conditioned spatial attention module for interpretable skin lesion classification.",
-      "Fused patient metadata (age, sex, lesion location) with visual features to improve class-balanced predictions and robustness.",
       "Achieved 87.38% accuracy and improved macro-F1 (0.776 → 0.789) with structured attention outperforming Grad-CAM explanations."
     ],
     highlights: ["Trainable attention", "87.4% accuracy", "Balanced performance"]
   },
   {
-    title: "StayFocused: Gamified Browser Extension for Distraction-Free Studying",
-    impact: "85%+ Users Report Improved Focus",
-    stack: "HTML • CSS • JavaScript • Chrome APIs",
+    title: "HIDS: Human Intruder Detection and Surveillance System",
+    impact: "• 95%+ Accuracy",
+    stack: "• Python • PyTorch • Raspberry Pi • YOLO • MTCNN • ResNet",
     desc: [
-      "Built a Chrome extension using service workers, navigation interception and sync storage to block distractions and track focus behavior.",
-      "Implemented gamification features including streaks, XP rewards and a virtual Focus Garden to encourage habit formation.",
+      "Built a real-time CCTV-based intruder detection system using MTCNN for face detection and YOLO for uniform-based classification.",
+      "Achieved 95%+ accuracy with low-latency inference on live camera feeds integrated into existing security infrastructure."
+    ],
+    highlights: ["Real-time detection", "CCTV integration", "Face recognition"]
+  },
+  {
+    title: "StayFocused: Gamified Browser Extension for Distraction-Free Studying",
+    impact: "• 85%+ Users Report Improved Focus",
+    stack: "• HTML • CSS • JavaScript • Chrome APIs",
+    desc: [
+      "Developed a Chrome extension for distraction blocking and focus tracking using Chrome APIs.",
       "User study showed 85%+ improvement in focus, accountability and study efficiency among university students."
     ],
     highlights: ["Chrome extension", "85%+ positive user impact", "Gamified focus tracking"]
   },
-  {
-    title: "UNet: Uniting NGOs, Empowering Networks and Amplifying Social Change",
-    impact: "500+ NGOs Integrated • Secure Donations & Volunteering",
-    stack: "Flutter • Django • PostgreSQL • Python",
-    desc: [
-      "Developed a full-stack NGO platform enabling registration, donations, volunteering and real-time engagement through a unified system.",
-      "Integrated a content-based recommendation engine over 500+ NGOs to improve discoverability and donor–cause matching.",
-      "Implemented secure Razorpay payments and end-to-end validation across authentication, onboarding and transaction workflows."
-    ],
-    highlights: ["Full-stack social platform", "Cross-Platform UI", "End-to-End Encryption"]
-  },
-  {
-    title: "HIDS: Human Intruder Detection System – Unifying Computer Vision and IoT for Proactive Security",
-    impact: "95%+ Accuracy",
-    stack: "Python • PyTorch • Raspberry Pi • YOLO • MTCNN • ResNet",
-    desc: [
-      "Built a real-time CCTV-based intruder detection system using MTCNN for face detection and YOLO for uniform-based classification.",
-      "Classified individuals as students, teachers or intruders using deep facial embeddings and object detection pipelines.",
-      "Achieved 95%+ accuracy with low-latency inference on live camera feeds integrated into existing security infrastructure."
-    ],
-    highlights: ["Real-time detection", "CCTV integration", "Face recognition"]
-  }
+  
 ];
 
 
   const skills = {
-    "Programming": ["Python", "Java", "C", "C++"],
-    "AI/ML & Data Science": ["PyTorch", "TensorFlow", "Keras", "Pandas", "NumPy", "LangChain", "Hugging Face"],
-    "Web Development": ["HTML", "CSS", "JavaScript", "NodeJS", "React", "Streamlit", "Tkinter", "Django"],
+    "Programming": ["Python", "Java", "C++", "C#"],
+    "AI/ML & Data Science": ["PyTorch", "TensorFlow", "Keras", "LangChain", "LangGraph", "Pandas", "NumPy"],
+    "Web Development": ["JavaScript", "NodeJS", "React", "TypeScript", ".NET", "Django", "HTML", "CSS",  "Streamlit"],
     "Databases & Tools": ["PostgreSQL", "MySQL", "Git", "GitHub", "Power BI", "Matplotlib", "Seaborn"]
   };
 
@@ -209,8 +246,8 @@ export default function Portfolio() {
       school: "University of Virginia",
       period: "Aug 2025 – Dec 2026",
       location: "Charlottesville, VA",
-      gpa: "4.00 / 4.00",
-      courses: ["Machine Learning", "Natural Language Processing", "Human Computer Interaction", "Signal Processing, Machine Learning and Control", "Neural Networks", "AI Agents", "Data Privacy"]
+      gpa: "3.96 / 4.00",
+      courses: ["Neural Networks", "AI Agents", "Data Privacy", "Machine Learning", "Natural Language Processing", "Human Computer Interaction", "Signal Processing, Machine Learning and Control"]
     },
     {
       degree: "Bachelor of Engineering in Computer Science",
@@ -528,7 +565,7 @@ export default function Portfolio() {
           Open to opportunities in Artificial Intelligence/Machine Learning, Data Engineering, Data Science and Software Development
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 relative z-10">
+        {/* <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 relative z-10">
           <a 
             href="mailto:pmm7nh@virginia.edu"
             className="px-10 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-full font-bold hover:scale-110 hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300"
@@ -541,7 +578,7 @@ export default function Portfolio() {
           >
             Download Resume
           </a>
-        </div>
+        </div> */}
 
         <div className="flex gap-8 justify-center relative z-10">
           <a 
@@ -574,7 +611,7 @@ export default function Portfolio() {
          Built with precision and innovation
         </p>
         <p className="text-xs text-slate-500">
-          © 2025 Tejas Venu. All rights reserved.
+          © 2026 Tejas Venu. All rights reserved.
         </p>
       </footer>
 
